@@ -3,14 +3,17 @@ export default function RootLayout({
     revenue,
     users,
     notifications,
+    logins,
 
   }: {
     children: React.ReactNode,
     revenue: React.ReactNode,
     users: React.ReactNode,
-    notifications: React.ReactNode
+    notifications: React.ReactNode,
+    logins: React.ReactNode
   }) {
-    return (
+    const isLoggedIn = true
+    return isLoggedIn ? (
         <div>
             <div>{children}</div>
             <div style={{display:"flex"}}>
@@ -21,5 +24,7 @@ export default function RootLayout({
             <div style={{display: "flex", flex:1}}>{notifications}</div>
             </div>
         </div>    
-    )
+    ):(
+      logins
+    );
   }

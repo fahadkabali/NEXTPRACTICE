@@ -5,7 +5,7 @@ export default function NoficationArchive(){
     return(
         <Card>
             <div>Archived Notifications</div>
-            <Link href="/complex-dashboard">Archived Notifications</Link>
+            <Link href="/complex-dashboard">Default</Link>
 
         </Card>
     )
